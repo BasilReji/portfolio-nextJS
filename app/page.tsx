@@ -1,95 +1,89 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+
+import { useEffect } from "react";
+import styles from "./page.module.scss";
+import Link from "next/link";
 
 export default function Home() {
+  function norm(value: number, min: number, max: number): number {
+    return (value - min) / (max - min);
+  }
+
+  function lerp(norm: number, min: number, max: number): number {
+    return (max - min) * norm + min;
+  }
+
+  function map(
+    value: number,
+    sourceMin: number,
+    sourceMax: number,
+    destMin: number,
+    destMax: number
+  ): number {
+    return lerp(norm(value, sourceMin, sourceMax), destMin, destMax);
+  }
+
+  function map2(
+    value: number,
+    sourceMin: number,
+    sourceMax: number,
+    destMin: number,
+    destMax: number,
+    percent: number
+  ): number {
+    return percent <= 0.5
+      ? map(value, sourceMin, sourceMax, destMin, destMax)
+      : map(value, sourceMin, sourceMax, destMax, destMin);
+  }
+
+  useEffect(() => {
+    const el = document.querySelector("h1");
+
+    if (el) {
+      let text = el.innerText.trim();
+      let numberOfChars = text.length;
+
+      el.innerHTML =
+        "<span>" +
+        text
+          .split("")
+          .map((c) => {
+            return c === " " ? "&nbsp;" : c;
+          })
+          .join("</span><span>") +
+        "</span>";
+
+      el.querySelectorAll("span").forEach((c, i) => {
+        const skew = map(i, 0, numberOfChars - 1, -15, 15);
+        const scale = map2(i, 0, numberOfChars - 1, 1, 3, i / numberOfChars);
+        const letterSpace = map2(
+          i,
+          0,
+          numberOfChars - 1,
+          5,
+          20,
+          i / numberOfChars
+        );
+
+        c.style.transform = "skew(" + skew + "deg) scale(1, " + scale + ")";
+        c.style.letterSpacing = letterSpace + "px";
+      });
+    }
+  }, []);
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
+      <div className={styles.homeContainer}>
+        <p>Welcome to my den:</p>
+        <h1>Basil Reji</h1>
         <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
+          A passionate React and React Native developer with a keen interest in
+          exploring new technologies
         </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <Link href="/about">
+          <span>Get to know me more</span>
+          <i></i>
+        </Link>
       </div>
     </main>
-  )
+  );
 }
