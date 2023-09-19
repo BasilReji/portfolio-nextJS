@@ -2,8 +2,8 @@ import React from "react";
 import style from "./style.module.scss";
 import profile from "../../assets/profile.jpg";
 import Image from "next/image"; // Import the Image component
-import SkillsBar from "@/components/SkillsBar";
 import { Skill } from "@/components/SkillsBar/SkillsBar";
+import SkillsGrid from "@/components/ProgressGrid";
 
 const skills: Skill[] = [
   { name: "JavaScript", level: 90 },
@@ -12,6 +12,8 @@ const skills: Skill[] = [
   { name: "Next JS", level: 50 },
   { name: "HTML", level: 90 },
   { name: "CSS", level: 70 },
+  { name: "Git", level: 80 },
+  { name: "Python", level: 40 },
 
   // Add more skills here
 ];
@@ -32,7 +34,10 @@ const About: React.FC = () => {
           exploring new technologies
         </p>
       </div>
-      <SkillsBar skills={skills} />
+      <div className={style.skillContainer}>
+        <h3>My Skills</h3>
+        <SkillsGrid skills={skills} />
+      </div>
     </div>
   );
 };
