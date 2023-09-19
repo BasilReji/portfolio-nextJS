@@ -74,10 +74,9 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.homeContainer}>
         <p>Welcome to my den:</p>
-        <h1>Basil Reji</h1>
+        <h1>All Caps</h1>
         <p>
-          A passionate React and React Native developer with a keen interest in
-          exploring new technologies
+          I am a dude playing a dude disguised as another dude.
         </p>
         <Link href="/about">
           <span>Get to know me more</span>

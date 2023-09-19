@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    gap: 2rem;
+    .profilePic {
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border-width: 10px;
+        }
+    }
+    .typewriter {
+        display: inline-block;
+        overflow: hidden;
+        border-right: 4px solid #333; /* Cursor-style caret */
+        white-space: nowrap;
+        margin: 0 auto;
+        letter-spacing: 4px;
+        animation:
+            typing 3s steps(15, end),
+            blink-caret 0.75s step-end infinite;
+    }
+
+    /* Typing animation */
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+
+    /* Blink caret (cursor) animation */
+    @keyframes blink-caret {
+        from,
+        to {
+            border-color: transparent;
+        }
+        50% {
+            border-color: #333;
+        }
+    }
+
+    .whoAmI {
+        h3 {
+        }
+        // background-color: green;
+    }
+}
