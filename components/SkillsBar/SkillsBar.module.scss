@@ -1,0 +1,40 @@
+.skills-bar {
+    width: 52vw;
+    margin: 0 auto;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.skill-bar {
+    height: 15px;
+    background-color: #ddd;
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: #007bff;
+    transition: width 1s ease-in-out;
+}
+
+.animate {
+    animation: scaleUp 1s ease-in-out forwards;
+}
+
+@keyframes scaleUp {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
