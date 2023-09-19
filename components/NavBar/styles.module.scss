@@ -1,0 +1,40 @@
+/* components/GlossyNavBar.module.css */
+.glossyNavBar {
+    position: fixed;
+    bottom: 0;
+    left: 50%; /* Move the bar to the horizontal center */
+    transform: translateX(-50%); /* Center it properly */
+    width: 60%; /* Set the width to 60% of the screen */
+    background: linear-gradient(to bottom, rgba(231, 39, 205, 0.8), hsla(192, 65%, 64%, 0.882));
+    padding: 20px;
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center; /* Distribute the links evenly */
+    align-items: center; /* Center the links vertically */
+    margin-top: 40px;
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.navLinks li {
+    margin: 0 10px;
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: wheat; /* Default text color */
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navLinks a:hover {
+    color: chartreuse; /* Text color on hover */
+    cursor: pointer; /* Change cursor to a pointer on hover */
+    text-decoration: underline; /* Underline text on hover */
+}
