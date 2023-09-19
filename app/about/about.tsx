@@ -30,8 +30,13 @@ const About: React.FC = () => {
       <div className={style.whoAmI}>
         <h3>Who am I</h3>
         <p>
-          A passionate React and React Native developer with a keen interest in
-          exploring new technologies
+          I’m a developer who has passion for building clean web applications
+          with intuitive functionalities. I enjoy the process of turning ideas
+          into reality using creative solutions. I’m always curious about
+          learning new skills, tools, and concepts. In addition to working on
+          various solo full stack projects, I have worked with creative teams,
+          which involves daily stand-ups and communications, source control, and
+          project management.
         </p>
       </div>
       <div className={style.skillContainer}>

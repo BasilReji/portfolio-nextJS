@@ -50,13 +50,16 @@
         display: flex;
         gap: 20px;
         flex-direction: column;
+        align-items: center;
+        max-width: 60vw;
     }
 
     .skillContainer {
-        width: 55vw;
         display: flex;
+        max-width: 60vw;
         flex-direction: column;
         gap: 20px;
+        align-items: center;
         h3 {
             margin-left: 1.5rem;
         }

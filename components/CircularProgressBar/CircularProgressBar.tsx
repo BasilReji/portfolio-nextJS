@@ -43,7 +43,12 @@ const CircularProgressBar: React.FC<CircularProgressBarProps> = ({
         strokeDasharray={circumference}
         strokeDashoffset={offset}
       />
-      <text x="30%" y="55%" className={styles.percentageText}>
+      <text
+        x="30%"
+        y="55%"
+        fill={getRandomColor()}
+        className={styles.percentageText}
+      >
         {percentage}%
       </text>
     </svg>
