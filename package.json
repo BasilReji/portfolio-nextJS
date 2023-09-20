@@ -14,10 +14,13 @@
     "@types/react-dom": "18.2.7",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
+    "gsap": "^3.12.2",
+    "moment": "^2.29.4",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.67.0",
+    "that-3d-text-library": "^0.0.1-alpha.16",
     "typescript": "5.2.2"
   }
 }

@@ -4,7 +4,6 @@ import profile from "../../assets/profile.jpg";
 import Image from "next/image"; // Import the Image component
 import { Skill } from "@/components/SkillsBar/SkillsBar";
 import SkillsGrid from "@/components/ProgressGrid";
-import { useRouter } from "next/router";
 import Link from "next/link";
 import Wrapper from "@/components/Wrapper";
 
@@ -59,4 +58,4 @@ const About: React.FC = () => {
   );
 };
 
-export { About };
+export default About;
