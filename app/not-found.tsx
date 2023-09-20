@@ -1,7 +1,8 @@
+import Beer from "@/components/Beer404";
 import ScreenSaver from "@/components/ScreenSaver";
 
 const Notfound = () => {
-  return <ScreenSaver />;
+  return <Beer />;
 };
 
 export default Notfound;

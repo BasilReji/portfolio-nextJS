@@ -1,3 +1,5 @@
+'use client'
+
 import ScreenSaver from "@/components/ScreenSaver";
 import React, { useState, useEffect } from "react";
 
