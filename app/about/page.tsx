@@ -1,11 +1,12 @@
 import React from "react";
 import style from "./style.module.scss";
-import profile from "../../assets/profile.jpg";
+import profile from "../../assets/profile2.jpg";
 import Image from "next/image"; // Import the Image component
 import { Skill } from "@/components/SkillsBar/SkillsBar";
 import SkillsGrid from "@/components/ProgressGrid";
 import Link from "next/link";
 import Wrapper from "@/components/Wrapper";
+import TimeLine from "@/components/TimeLine";
 
 const skills: Skill[] = [
   { name: "JavaScript", level: 90 },
@@ -46,6 +47,7 @@ const About: React.FC = () => {
           <h3>My Skills</h3>
           <SkillsGrid skills={skills} />
         </div>
+        <TimeLine />
         <div className={style.downloadContainer}>
           <Link className={style.downloadButton} href={"/download"}>
             Download My Resume
