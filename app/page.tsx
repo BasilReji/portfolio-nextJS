@@ -76,10 +76,11 @@ export default function Home() {
         <p>Welcome to my den:</p>
         <h1>All Caps</h1>
         <p>
-          I am a dude playing a dude disguised as another dude.
+          <b>Some one said - </b>Instead of worrying about what you cannot control,
+          shift your energy to what you can create
         </p>
         <Link href="/about">
-          <span>Get to know me more</span>
+          <span>why Wait, Click Me!</span>
           <i></i>
         </Link>
       </div>

@@ -21,6 +21,33 @@ const skills: Skill[] = [
   // Add more skills here
 ];
 
+const events = [
+  {
+    date: "August 2019",
+    event: "Graduation- Bachelor of Technology in Computer Science engineering",
+  },
+  {
+    date: "December 2019",
+    event: "Internship- Java fullstack developer",
+  },
+  {
+    date: "July 2020",
+    event: "First Job- Factweavers Technology",
+  },
+  {
+    date: "September 2020",
+    event: "Called myself a React Developer",
+  },
+  {
+    date: "August 2021",
+    event: "Called myself a React Native Developer",
+  },
+  {
+    date: "September 2021",
+    event: "Worked on more than 10 projects, both on React and React Native",
+  },
+];
+
 const About: React.FC = () => {
   return (
     <Wrapper>
@@ -47,7 +74,7 @@ const About: React.FC = () => {
           <h3>My Skills</h3>
           <SkillsGrid skills={skills} />
         </div>
-        <TimeLine />
+        <TimeLine title="My Growth" events={events} />
         <div className={style.downloadContainer}>
           <Link className={style.downloadButton} href={"/download"}>
             Download My Resume
