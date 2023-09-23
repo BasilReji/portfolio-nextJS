@@ -1,3 +1,3 @@
-import { About } from "./about";
+import { Contact } from "./contact";
 
-export default About;
+export default Contact;
