@@ -5,7 +5,7 @@ export function Wrapper(props: any) {
     <>
       <div
         style={{
-          marginBottom: "40px",
+          marginBottom: "100px",
         }}
       >
         {props.children}
