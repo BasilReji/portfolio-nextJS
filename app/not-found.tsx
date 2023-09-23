@@ -1,8 +1,11 @@
 import Beer from "@/components/Beer404";
-import ScreenSaver from "@/components/ScreenSaver";
-
+import Wrapper from "@/components/Wrapper";
 const Notfound = () => {
-  return <Beer />;
+  return (
+    <Wrapper>
+      <Beer />
+    </Wrapper>
+  );
 };
 
 export default Notfound;

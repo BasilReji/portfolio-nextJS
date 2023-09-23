@@ -1,12 +1,13 @@
 import React from "react";
 import style from "./style.module.scss";
 import profile from "../../assets/profile2.jpg";
-import Image from "next/image"; // Import the Image component
+import Image from "next/image";
 import { Skill } from "@/components/SkillsBar/SkillsBar";
 import SkillsGrid from "@/components/ProgressGrid";
 import Link from "next/link";
 import Wrapper from "@/components/Wrapper";
 import TimeLine from "@/components/TimeLine";
+import Map from "@/components/Map";
 
 const skills: Skill[] = [
   { name: "JavaScript", level: 90 },
@@ -105,6 +106,10 @@ const About: React.FC = () => {
             <div className={style.downloadButton__horizontal}></div>
             <div className={style.downloadButton__vertical}></div>
           </Link>
+        </div>
+        <div className={style.mapContainer}>
+          <h3>My Location</h3>
+          <Map />
         </div>
       </div>
     </Wrapper>

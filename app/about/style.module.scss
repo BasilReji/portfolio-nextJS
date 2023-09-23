@@ -16,6 +16,15 @@
             aspect-ratio: 3/2;
         }
     }
+    .mapContainer {
+        width: 60vw;
+        height: 60vh;
+        margin: 40px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
     .typewriter {
         display: inline-block;
         overflow: hidden;
