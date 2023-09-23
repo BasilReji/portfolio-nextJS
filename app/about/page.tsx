@@ -60,18 +60,21 @@ const About: React.FC = () => {
         </h3>
         <div className={style.achievementsContainer}>
           <div className={style.experience}>
+            <span className={style.emoji}>&#128170;&#127996;</span>
             <h3 className={style.number}>
               3<sup>+</sup>
             </h3>
             <span>Years of experience</span>
           </div>
           <div className={style.experience}>
+            <span className={style.emoji}>&#128526;</span>
             <h3 className={style.number}>
               20<sup>+</sup>
             </h3>
             <span>Projects</span>
           </div>
           <div className={style.experience}>
+            <span className={style.emoji}>&#129299;</span>
             <h3 className={style.number}>
               30<sup>+</sup>
             </h3>
