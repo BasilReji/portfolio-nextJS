@@ -58,6 +58,27 @@ const About: React.FC = () => {
         <h3>
           <span className={style.typewriter}>Hi, Iam Basil Reji</span>
         </h3>
+        <div className={style.achievementsContainer}>
+          <div className={style.experience}>
+            <h3 className={style.number}>
+              3<sup>+</sup>
+            </h3>
+            <span>Years of experience</span>
+          </div>
+          <div className={style.experience}>
+            <h3 className={style.number}>
+              20<sup>+</sup>
+            </h3>
+            <span>Projects</span>
+          </div>
+          <div className={style.experience}>
+            <h3 className={style.number}>
+              30<sup>+</sup>
+            </h3>
+            <span>Certifications</span>
+          </div>
+        </div>
+
         <div className={style.whoAmI}>
           <h3>Who am I</h3>
           <p>
