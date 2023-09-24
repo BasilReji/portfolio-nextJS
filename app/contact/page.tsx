@@ -4,13 +4,9 @@ import Wrapper from "@/components/Wrapper";
 import "./style.scss";
 import { useState } from "react";
 import {
-  FacebookShareButton,
   FacebookIcon,
-  InstapaperShareButton,
   InstagramIcon,
-  WhatsappShareButton,
   WhatsappIcon,
-  LinkedinShareButton,
   LinkedinIcon,
 } from "next-share";
 const Contact = () => {
@@ -55,18 +51,34 @@ const Contact = () => {
         <div className="follow">
           <div className="vertical-text">Connect</div>
           <div className="social-media">
-            <FacebookShareButton url={"http://localhost:3000"}>
+            <a
+              target="_blank"
+              rel="noopener"
+              href={"https://www.facebook.com/basilreji97/"}
+            >
               <FacebookIcon size={32} round />
-            </FacebookShareButton>
-            <InstapaperShareButton url={"http://localhost:3000"}>
+            </a>
+            <a
+              target="_blank"
+              rel="noopener"
+              href={"https://www.instagram.com/_b_r.p_/"}
+            >
               <InstagramIcon size={32} round />
-            </InstapaperShareButton>
-            <WhatsappShareButton url={"http://localhost:3000"}>
+            </a>
+            <a
+              target="_blank"
+              rel="noopener"
+              href={"https://call.whatsapp.com/voice/h8bx8M0FEFer2UeveTkBgE"}
+            >
               <WhatsappIcon size={32} round />
-            </WhatsappShareButton>
-            <LinkedinShareButton url={"http://localhost:3000"}>
+            </a>
+            <a
+              target="_blank"
+              rel="noopener"
+              href={"https://www.linkedin.com/in/basil-reji-22bb56105/"}
+            >
               <LinkedinIcon size={32} round />
-            </LinkedinShareButton>
+            </a>
           </div>
         </div>
         <div className="container">
