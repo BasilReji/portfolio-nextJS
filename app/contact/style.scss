@@ -139,7 +139,9 @@ a:hover {
     background-color: burlywood;
     display: flex;
     gap: 1rem;
-    padding: 20px;
+    padding: 50px;
+    border-width: 1px;
+    border-bottom-right-radius: 50%;
     .vertical-text {
         writing-mode: vertical-lr; /* vertical writing mode from left to right */
         text-orientation: upright; /* upright text */
