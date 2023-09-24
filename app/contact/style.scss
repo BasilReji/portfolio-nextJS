@@ -133,3 +133,29 @@ a:hover {
         border: 2px solid #fff;
     }
 }
+.follow {
+    position: absolute;
+    left: 0;
+    background-color: burlywood;
+    display: flex;
+    gap: 1rem;
+    padding: 20px;
+    .vertical-text {
+        writing-mode: vertical-lr; /* vertical writing mode from left to right */
+        text-orientation: upright; /* upright text */
+        /* Optional styling */
+        font-size: 24px;
+        font-weight: bold;
+        padding: 10px;
+        display: inline-block; /* Display inline to contain the vertical text */
+        letter-spacing: 0rem;
+        border-right: 1px dashed black; /* Border between items */
+    }
+    .social-media {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+}

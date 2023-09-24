@@ -3,6 +3,16 @@
 import Wrapper from "@/components/Wrapper";
 import "./style.scss";
 import { useState } from "react";
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  InstapaperShareButton,
+  InstagramIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+} from "next-share";
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -42,6 +52,23 @@ const Contact = () => {
   return (
     <Wrapper>
       <section className="contact">
+        <div className="follow">
+          <div className="vertical-text">Connect</div>
+          <div className="social-media">
+            <FacebookShareButton url={"http://localhost:3000"}>
+              <FacebookIcon size={32} round />
+            </FacebookShareButton>
+            <InstapaperShareButton url={"http://localhost:3000"}>
+              <InstagramIcon size={32} round />
+            </InstapaperShareButton>
+            <WhatsappShareButton url={"http://localhost:3000"}>
+              <WhatsappIcon size={32} round />
+            </WhatsappShareButton>
+            <LinkedinShareButton url={"http://localhost:3000"}>
+              <LinkedinIcon size={32} round />
+            </LinkedinShareButton>
+          </div>
+        </div>
         <div className="container">
           <div className="image">
             <div className="form-box">
