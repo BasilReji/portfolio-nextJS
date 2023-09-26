@@ -11,9 +11,10 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border-width: 10px;
+            border: 10px solid red;
             object-fit: cover;
-            aspect-ratio: 3/2;
+            aspect-ratio: 1/2;
+            border-color: whitesmoke;
         }
     }
     .mapContainer {

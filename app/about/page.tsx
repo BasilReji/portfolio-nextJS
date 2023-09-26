@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./style.module.scss";
-import profile from "../../assets/profile2.jpg";
+import profile from "../../assets/profile4.png";
 import Image from "next/image";
 import { Skill } from "@/components/SkillsBar/SkillsBar";
 import SkillsGrid from "@/components/ProgressGrid";

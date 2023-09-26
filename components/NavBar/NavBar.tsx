@@ -17,9 +17,6 @@ const GlossyNavBar = () => {
           <li>
             <Link href="/contact">Contact</Link>
           </li>
-          <li>
-            <Link href="/movies">Movies</Link>
-          </li>
         </ul>
       </nav>
     </div>
