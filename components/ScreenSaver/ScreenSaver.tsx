@@ -12,7 +12,7 @@ interface Particle {
   air: HTMLDivElement[];
 }
 
-const YourComponent: React.FC = () => {
+const ScreenSaver: React.FC = () => {
   const letters = ["Basil Reji"];
   const STYLE_COUNT = 16;
   const FONT_COUNT = 4;
@@ -199,4 +199,4 @@ const YourComponent: React.FC = () => {
   );
 };
 
-export default YourComponent;
+export default ScreenSaver;
