@@ -76,8 +76,8 @@ export default function Home() {
         <p>Welcome to my den:</p>
         <h1>All Caps</h1>
         <p>
-          <b>Some one said - </b>Instead of worrying about what you cannot control,
-          shift your energy to what you can create
+          "Instead of worrying about what you cannot control, shift your energy
+          to what you can create." — Roy T. Bennett.
         </p>
         <Link href="/about">
           <span>why Wait, Click Me!</span>
